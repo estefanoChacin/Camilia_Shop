@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ANNIE_SHOP</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ANNIE_SHOP.styles.css" asp-append-version="true" />
+    @* AGREGAR FONTAWESOME *@
+    <script src="https://kit.fontawesome.com/2f077516b6.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="d-flex flex-column h-100">
+    
+    @await Html.PartialAsync("_Header")
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer mt-auto border-top bg-light text-center text-muted py-3">
+        <div class="container">
+            &copy; 2023 - ANNIE_SHOP - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-muted">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
