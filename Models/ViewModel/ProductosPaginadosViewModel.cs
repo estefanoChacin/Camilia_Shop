@@ -7,6 +7,6 @@ namespace ANNIE_SHOP.Models.ViewModel
 {
     public class ProductosPaginadosViewModel
     {
-        
+        public int MyProperty { get; set; }
     }
 }
