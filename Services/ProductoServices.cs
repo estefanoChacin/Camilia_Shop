@@ -72,6 +72,7 @@ namespace ANNIE_SHOP.Services
                 MostrarMensajeSinResultados = MostrarMensajeSinResultados
             };
 
+            var cc = "tut";
             return model;
         }
 
