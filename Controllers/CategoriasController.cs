@@ -13,11 +13,17 @@ namespace ANNIE_SHOP.Controllers
         public CategoriasController(ApplicationDbContext context):base(context)
         {}
 
+
+
+
         // GET: Categorias
         public async Task<IActionResult> Index()
         {
             return View(await _context.Categorias.ToListAsync());
         }
+
+
+
 
         // GET: Categorias/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -37,11 +43,17 @@ namespace ANNIE_SHOP.Controllers
             return View(categoria);
         }
 
+
+
+
         // GET: Categorias/Create
         public IActionResult Create()
         {
             return View();
         }
+
+
+
 
         // POST: Categorias/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -74,6 +86,9 @@ namespace ANNIE_SHOP.Controllers
             }
             return View(categoria);
         }
+
+
+
 
         // POST: Categorias/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -110,6 +125,9 @@ namespace ANNIE_SHOP.Controllers
             return View(categoria);
         }
 
+
+
+
         // GET: Categorias/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -127,6 +145,9 @@ namespace ANNIE_SHOP.Controllers
 
             return View(categoria);
         }
+
+
+
 
         // POST: Categorias/Delete/5
         [HttpPost, ActionName("Delete")]
