@@ -166,7 +166,6 @@ namespace ANNIE_SHOP.Controllers
 
         private bool CategoriaExists(int id)
         {
-            var cc = "tut";
             return _context.Categorias.Any(e => e.CategoriaId == id);
         }
     }
