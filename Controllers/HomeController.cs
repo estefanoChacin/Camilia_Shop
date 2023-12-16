@@ -1,7 +1,6 @@
 ﻿using ANNIE_SHOP.Data;
 using ANNIE_SHOP.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 using ANNIE_SHOP.Services;
 
 namespace ANNIE_SHOP.Controllers
@@ -19,6 +18,9 @@ namespace ANNIE_SHOP.Controllers
             _categorias = categorias;
             _productos = productos;
         }
+
+
+
 
         public async Task<IActionResult> Index()
         {
@@ -38,26 +40,56 @@ namespace ANNIE_SHOP.Controllers
 
 
 
-        public async Task<IActionResult> Productos(int? categoriaId, string? busqueda, int pagina = 1)
+
+
+
+        public async Task<IActionResult> AgregarProducto(int id, int cantidad, int? categoriaId, string? busqueda, int pagina = 1)
         {
-            try
+            var carritoViewModel = await AgregarProductoAlCarrito(id, cantidad);
+            if (carritoViewModel != null)
             {
-                int productosPorPagina = 9;
-                var model = await _productos.GetProductoPaginados(categoriaId, busqueda, pagina, productosPorPagina);
-                ViewBag.Categorias = await _categorias.GetCategorias();
-
-                if(Request.Headers["X-Request-With"] == "XMLHttpRequets")
-                    return PartialView("_ProductosPartial", model);
-
-                return View(model);
+                return RedirectToAction(
+                    "Productos",
+                    new
+                    {
+                        id,
+                        categoriaId,
+                        busqueda,
+                        pagina
+                    }
+                );
             }
-            catch (Exception e)
-            {
-                
-                return HandleError(e);
-            }
+            else
+                return NotFound();
         }
 
+
+
+        public async Task<IActionResult> AgregarProductoIndex(int id, int cantidad)
+        {
+            var carritoViewModel = await AgregarProductoAlCarrito(id, cantidad);
+            if (carritoViewModel != null)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+                return NotFound();
+        }
+
+
+
+
+
+        public async Task<IActionResult> AgregarProductoDetalle(int id, int cantidad)
+        {
+            var carritoViewModel = await AgregarProductoAlCarrito(id, cantidad);
+            if (carritoViewModel != null)
+            {
+                return RedirectToAction("DetalleProducto", new {id});
+            }
+            else
+                return NotFound();
+        }
 
 
 
@@ -79,14 +111,5 @@ namespace ANNIE_SHOP.Controllers
             return View();
         }
 
-
-
-
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
