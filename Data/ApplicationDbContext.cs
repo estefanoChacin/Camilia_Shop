@@ -49,8 +49,6 @@ namespace ANNIE_SHOP.Data
             .WithOne(pd=>pd.Categoria)
             .HasForeignKey(p=>p.CategoriaId)
             .OnDelete(DeleteBehavior.Restrict);
-            
-
         }
     }
 }
