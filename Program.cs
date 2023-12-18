@@ -1,4 +1,6 @@
 using ANNIE_SHOP.Data;
+using ANNIE_SHOP.Models;
+using ANNIE_SHOP.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
@@ -32,6 +34,8 @@ builder.Services
     });
 
 // configure services for me
+builder.Services.AddScoped<IProductoServices, ProductoServices>();
+builder.Services.AddScoped<ICategoriaServices, CategoriaServices>();
 
 
 var app = builder.Build();

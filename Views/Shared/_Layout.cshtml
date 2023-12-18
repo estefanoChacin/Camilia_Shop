@@ -21,7 +21,7 @@
         </main>
     </div>
 
-    <footer class="footer mt-auto border-top bg-light text-center text-muted py-3">
+    <footer class="mt-auto border-top bg-light text-center text-muted py-3">
         <div class="container">
             &copy; 2023 - ANNIE_SHOP - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-muted">Privacy</a>
         </div>
@@ -29,6 +29,8 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/breadcrumb.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

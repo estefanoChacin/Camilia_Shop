@@ -42,7 +42,7 @@ namespace ANNIE_SHOP.Controllers
 
 
 
-
+        [HttpPost]
         public async Task<IActionResult> AgregarProducto(int id, int cantidad, int? categoriaId, string? busqueda, int pagina = 1)
         {
             var carritoViewModel = await AgregarProductoAlCarrito(id, cantidad);
