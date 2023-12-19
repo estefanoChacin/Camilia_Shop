@@ -1,0 +1,57 @@
+@model Producto
+@{
+    ViewData["Title"] = "Detalle del producto";
+}
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" id="breadcrumb-container">
+
+        </ol>
+    </nav>
+    <h2 class="my-2">@Model.Nombre</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="@Model.Imagen" class="img-fluid" alt="Imagen del producto">
+        </div>
+        <div class="col-md-6">
+            <h4>Modelo: @Model.Modelo</h4>
+            <P>@Model.Descripcion</P>
+            <P>Precio: @string.Format("{0:c}", Model.Precio).</P>
+            <P>Stock: @Model.Stock</P>
+            <P>Categoria: @Model.Categoria.Nombre</P>
+            <P>Marca: @Model.Marca</P>
+            @if (Model.Stock < 1)
+            {
+                <div class="alert alert-danger" role="alert">
+                    <i class="fas fa-exclamation-circle"></i> Agotado
+                </div>
+            }
+            else
+            {
+                <form method="post" action="@Url.Action("AgregarProductoDetalle")" class="d-flex">
+                    <input type="hidden" name="id" value="@Model.ProductoId">
+                    <input type="number" class="form-control" name="cantidad" value="1" min="1" max="@Model.Stock">
+                    <button type="submit" class="btn btn-outline-primary rounded-pill">
+                        <li class="fas fa-cart-plus"></li>
+                    </button>
+                </form>
+            }
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@{
+    string? controllerName = Context.GetRouteValue("controller") as string;
+    string? actionName = Context.GetRouteValue("action") as string;
+}
+
+<script>
+    var controllerName = '@controllerName';
+    var actionName = '@actionName';
+</script>

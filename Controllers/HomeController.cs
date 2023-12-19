@@ -39,6 +39,30 @@ namespace ANNIE_SHOP.Controllers
 
 
 
+[HttpPost]
+public async Task<IActionResult> Productos(int? categoriaId, string? busqueda, int pagina = 1)
+        {
+            try
+            {
+                int productosPorPagina = 9;
+                var model = await _productos.GetProductoPaginados(
+                    categoriaId,
+                    busqueda,
+                    pagina,
+                    productosPorPagina
+                );
+                ViewBag.Categorias = await _categorias.GetCategorias();
+                if (Request.Headers["X-Request-With"] == "XMLHttpRequest")
+                {
+                    return PartialView("_ProductosPartial", model);
+                }
+                return View(model);
+            }
+            catch (Exception e){
+            return HandleError(e);
+            }
+        }
+
 
 
 
@@ -85,7 +109,7 @@ namespace ANNIE_SHOP.Controllers
             var carritoViewModel = await AgregarProductoAlCarrito(id, cantidad);
             if (carritoViewModel != null)
             {
-                return RedirectToAction("DetalleProducto", new {id});
+                return RedirectToAction("DetalleProducto", new { id });
             }
             else
                 return NotFound();
