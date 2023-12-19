@@ -2,6 +2,7 @@
 using ANNIE_SHOP.Models;
 using Microsoft.AspNetCore.Mvc;
 using ANNIE_SHOP.Services;
+using ANNIE_SHOP.Models.ViewModel;
 
 namespace ANNIE_SHOP.Controllers
 {
@@ -39,13 +40,13 @@ namespace ANNIE_SHOP.Controllers
 
 
 
-[HttpPost]
+
 public async Task<IActionResult> Productos(int? categoriaId, string? busqueda, int pagina = 1)
         {
             try
             {
                 int productosPorPagina = 9;
-                var model = await _productos.GetProductoPaginados(
+                ProductosPaginadosViewModel model = await _productos.GetProductoPaginados(
                     categoriaId,
                     busqueda,
                     pagina,
