@@ -33,7 +33,7 @@
         </nav>
         <main role="main" class="col-md-9 pb-3">
             <div id="productosContainer">
-                @Html.Partial("_ProductosPartial", Model) 
+                @await Html.PartialAsync("_ProductosPartial", Model)
             </div>
         </main>
     </div>
@@ -51,61 +51,55 @@
 
 @section Scripts
 {
-<script>
-    $(document).ready(function () {
-        $("#todasCheckbox").on('change', function () {
-            var idChecked = $(this).prop('checked');
-            $('.categoriaCheckbox').prop('checked', isChecked);
-            filtarProductos();
-        })
-
-        $('.categoriaCheckbox').on('change', function () {
-            var allchecked = $('.categoriaCheckbox:checked').length === $('.categoriaCheckbox').length;
-            $('#todasCheckbox').prop('checked', allChecked);
-            filtarProductos()
-        })
-
-
-        function filtarProductos() {
-            var selectedCategorias = [];
-            $('.categoriaCheckbox:checked').each(function () {
-                var categoriaId = $(this).data('categoria');
-                selectedCategorias.push(categoriaId);
+    <script>
+        $(document).ready(function () {
+            $("#todasCheckbox").on('change', function () {
+                var isChecked = $(this).prop('checked');
+                $('.categoriaCheckbox').prop('checked', isChecked);
+                filtarProductos();
             })
-            if (selectedCategorias.length === 0) {
-                $('.productoItem').show();
-            } else {
-                $('.productoItem').hide();
-                selectedCategorias.forEach(=> categoriaId {
-                    $('.productoItem[data-categoria="'+ categoriaId + '"]').show();
+
+            $('.categoriaCheckbox').on('change', function () {
+                var allChecked = $('.categoriaCheckbox:checked').length === $('.categoriaCheckbox').length;
+                $('#todasCheckbox').prop('checked', allChecked);
+                filtarProductos()
+            })
+
+
+            function filtarProductos() {
+                var selectedCategorias = [];
+                $('.categoriaCheckbox:checked').each(function () {
+                    var categoriaId = $(this).data('categoria');
+                    selectedCategorias.push(categoriaId);
                 })
-            }
-            var url = '@Url.Action("Productos", "Home")';
-            var Data = {
-                pagina: @Model.PaginaActual,
-                categoriaId: selectedCategorias.join(","),
-                busqueda: @Model.Busqueda
-            };
-
-            $.ajax({
-                url:url,
-                type: 'GET',
-                data: data,
-                success: function(result)
-                {
-                    $('#productosContainer').html(result);
-                },
-                error: function(xhr, statu, error)
-                {
-                    console.log(error);
+                if (selectedCategorias.length === 0) {
+                    $('.productoItem').show();
+                } else {
+                    $('.productoItem').hide();
+                    selectedCategorias.forEach(function (categoriaId) {
+                        $('.productoItem[data-categoria="' + categoriaId + '"]').show();
+                    })
                 }
-            });
-        }
+                var url = '@Url.Action("Productos", "Home")';
+                var Data = {
+                    pagina: @Model.PaginaActual,
+                    categoriaId: selectedCategorias.join(","),
+                    busqueda: '@Model.Busqueda'
+                        }
 
-
-
-
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    data: data,
+                    success: function (result) {
+                        $('#productosContainer').html(result);
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                    }
+                });
+            }
         });
 
-</script>
+    </script>
 }

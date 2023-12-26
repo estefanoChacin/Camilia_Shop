@@ -44,7 +44,7 @@ namespace ANNIE_SHOP.Services
                 query = query.Where(p=>p.Nombre.Contains(busqueda) || p.Descripcion.Contains(busqueda));
             
             int totalProductos = await query.CountAsync();
-            int TotalPaginas = (int)Math.Ceiling((double)totalProductos)/productosPorPaginas;
+            int TotalPaginas = (int)Math.Ceiling((double)totalProductos/productosPorPaginas);
 
             if(pagina<1)
                 pagina = 1;
@@ -56,7 +56,7 @@ namespace ANNIE_SHOP.Services
             {
                 Productos = await query
                     .OrderBy(p=>p.Nombre)
-                    .Skip((pagina -1) * productosPorPaginas)
+                    .Skip((pagina-1)  * productosPorPaginas)
                     .Take(productosPorPaginas)
                     .ToListAsync();
             }

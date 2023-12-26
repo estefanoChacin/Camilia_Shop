@@ -41,7 +41,7 @@ namespace ANNIE_SHOP.Controllers
 
 
 
-public async Task<IActionResult> Productos(int? categoriaId, string? busqueda, int pagina = 1)
+        public async Task<IActionResult> Productos(int? categoriaId, string? busqueda, int pagina = 1)
         {
             try
             {
@@ -53,14 +53,15 @@ public async Task<IActionResult> Productos(int? categoriaId, string? busqueda, i
                     productosPorPagina
                 );
                 ViewBag.Categorias = await _categorias.GetCategorias();
-                if (Request.Headers["X-Request-With"] == "XMLHttpRequest")
+                if (HttpContext.Request.Headers["X-Requested-With"] == "XMLHttpRequest")
                 {
                     return PartialView("_ProductosPartial", model);
                 }
-                return View(model);
+                return  View(model);
             }
-            catch (Exception e){
-            return HandleError(e);
+            catch (Exception e)
+            {
+                return HandleError(e);
             }
         }
 
