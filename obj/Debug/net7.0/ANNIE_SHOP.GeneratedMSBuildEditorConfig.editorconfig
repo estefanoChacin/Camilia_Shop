@@ -9,199 +9,211 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ANNIE_SHOP
 build_property.RootNamespace = ANNIE_SHOP
-build_property.ProjectDir = d:\PROYECTOS PERSONALES\ANNIE_SHOP\ANNIE_SHOP\
+build_property.ProjectDir = D:\PROYECTOS PERSONALES\ANNIE_SHOP\ANNIE_SHOP\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\PROYECTOS PERSONALES\ANNIE_SHOP\ANNIE_SHOP
+build_property.MSBuildProjectDirectory = D:\PROYECTOS PERSONALES\ANNIE_SHOP\ANNIE_SHOP
 build_property._RazorSourceGeneratorDebug = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Categorias/Create.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Categorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Categorias/Delete.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Categorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Categorias/Details.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Categorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Categorias/Edit.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Categorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Categorias/Index.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Categorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Dashboard/Index.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/DetallesPedidos/Create.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/DetallesPedidos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZXNQZWRpZG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/DetallesPedidos/Delete.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/DetallesPedidos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZXNQZWRpZG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/DetallesPedidos/Details.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/DetallesPedidos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZXNQZWRpZG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/DetallesPedidos/Edit.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/DetallesPedidos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZXNQZWRpZG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/DetallesPedidos/Index.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/DetallesPedidos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZXNQZWRpZG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/direcciones/Create.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/direcciones/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlyZWNjaW9uZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/direcciones/Delete.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/direcciones/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlyZWNjaW9uZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/direcciones/Details.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/direcciones/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlyZWNjaW9uZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/direcciones/Edit.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/direcciones/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlyZWNjaW9uZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/direcciones/Index.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/direcciones/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGlyZWNjaW9uZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Home/DetalleProducto.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Home/DetalleProducto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhbGxlUHJvZHVjdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Home/Index.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Home/Privacy.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Home/Productos.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Home/Productos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0b3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Pedidos/Create.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Pedidos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Pedidos/Delete.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Pedidos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Pedidos/Details.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Pedidos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Pedidos/Edit.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Pedidos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Pedidos/Index.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Pedidos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Productos/Create.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Productos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Productos/Delete.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Productos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Productos/Details.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Productos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Productos/Edit.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Productos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Productos/Index.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Productos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Roles/Create.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Roles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Roles/Delete.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Roles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Roles/Details.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Roles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Roles/Edit.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Roles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Roles/Index.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Roles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Shared/Error.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Shared/_Header.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Shared/_Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Shared/_ProductosPartial.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Shared/_ProductosPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0b3NQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Usuarios/Create.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Usuarios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Usuarios/Delete.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Usuarios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Usuarios/Details.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Usuarios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Usuarios/Edit.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Usuarios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Usuarios/Index.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Usuarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/_ViewImports.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/_ViewStart.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Shared/_Layout.cshtml]
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-79phxfe896

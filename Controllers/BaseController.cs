@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ANNIE_SHOP.Data;
 using Newtonsoft.Json;
@@ -7,13 +6,12 @@ using System.Diagnostics;
 using System.Data.Common;
 using ANNIE_SHOP.Models.ViewModel;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 
 namespace ANNIE_SHOP.Controllers
 {
     public class BaseController : Controller
     {
-        public readonly ApplicationDbContext _context;
+        protected readonly ApplicationDbContext _context;
 
         public BaseController(ApplicationDbContext context)
         {
