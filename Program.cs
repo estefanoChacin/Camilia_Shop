@@ -36,6 +36,8 @@ builder.Services
 // configure services for me
 builder.Services.AddScoped<IProductoServices, ProductoServices>();
 builder.Services.AddScoped<ICategoriaServices, CategoriaServices>();
+builder.Services.AddScoped<IUsuarioServices, UsuarioServices>();
+
 
 
 var app = builder.Build();

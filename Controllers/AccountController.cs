@@ -2,6 +2,7 @@ using System.Data.Common;
 using System.Security.Claims;
 using ANNIE_SHOP.Data;
 using ANNIE_SHOP.Models;
+using ANNIE_SHOP.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -15,8 +16,11 @@ namespace ANNIE_SHOP.Controllers
     public class AccountController : BaseController
     {
 
-        public AccountController(ApplicationDbContext context) : base(context)
-        { }
+        private IUsuarioServices _usuriosServices;
+        public AccountController(ApplicationDbContext context, IUsuarioServices usuarioServices) : base(context)
+        { 
+            _usuriosServices = usuarioServices;
+        }
 
 
         [AllowAnonymous]
@@ -63,6 +67,8 @@ namespace ANNIE_SHOP.Controllers
                         CodigoPostal=user.CodigoPostal
                     }
                 };
+
+                    user.Contrasenia = _usuriosServices.EncriptedPassword(user.Contrasenia);
 
                     await _context.AddAsync(user);
                     await _context.SaveChangesAsync();
@@ -112,6 +118,8 @@ namespace ANNIE_SHOP.Controllers
         {
             try
             {
+                password = _usuriosServices.EncriptedPassword(password);
+
                 var user = await _context.Usuarios.FirstOrDefaultAsync(u => u.Correo == email && u.Contrasenia == password);
 
                 if (user != null)
