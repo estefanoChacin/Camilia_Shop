@@ -18,7 +18,7 @@ namespace ANNIE_SHOP.Controllers
 
         private IUsuarioServices _usuriosServices;
         public AccountController(ApplicationDbContext context, IUsuarioServices usuarioServices) : base(context)
-        { 
+        {
             _usuriosServices = usuarioServices;
         }
 
@@ -99,13 +99,6 @@ namespace ANNIE_SHOP.Controllers
         [AllowAnonymous]
         public IActionResult Login()
         {
-            if (User.Identity != null && User.Identity.IsAuthenticated)
-            {
-                if (User.IsInRole("Administrador") || User.IsInRole("Staff"))
-                    return RedirectToAction("Index", "Dashboard");
-                else
-                    return RedirectToAction("Index", "Home");
-            }
             return View();
         }
 
@@ -136,11 +129,13 @@ namespace ANNIE_SHOP.Controllers
                         CookieAuthenticationDefaults.AuthenticationScheme,
                         new ClaimsPrincipal(identity)
                     );
-
-                    if (User.IsInRole("Administrador") || User.IsInRole("Staff"))
-                        return RedirectToAction("Index", "Dashboard");
-                    else
-                        return RedirectToAction("Index", "Home");
+                    if (rol != null)
+                    {
+                        if (rol.Nombre == "Administrador" || rol.Nombre == "Staff")
+                            return RedirectToAction("Index", "Dashboard");
+                        else
+                            return RedirectToAction("Index", "Home");
+                    }
                 }
                 ModelState.AddModelError("", "Credenciales invalidas. Por favor intentelo nuevamente.");
                 return View();
@@ -154,7 +149,8 @@ namespace ANNIE_SHOP.Controllers
 
 
 
-        public async Task<IActionResult> Logout(){
+        public async Task<IActionResult> Logout()
+        {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login");
         }

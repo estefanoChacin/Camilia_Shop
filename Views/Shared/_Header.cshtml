@@ -44,7 +44,7 @@
 
                             @if (User.FindFirstValue(ClaimTypes.Role) == "Administrador")
                             {
-                                <li><a>Dashboard</a></li>
+                                <li><a class="dropdown-item" asp-controller="Dashboard" asp-action="Index" >Dashboard</a></li>
                             }
                             <li>
                                 <hr class="dropdown-divider">

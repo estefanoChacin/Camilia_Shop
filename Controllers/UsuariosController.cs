@@ -5,9 +5,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ANNIE_SHOP.Data;
 using ANNIE_SHOP.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ANNIE_SHOP.Controllers
 {
+    [Authorize(Roles = "Administrador, Staff")]
     public class UsuariosController : BaseController
     {
 
@@ -168,16 +170,6 @@ namespace ANNIE_SHOP.Controllers
 
                     try
                     {
-                        // ExistingUser.Nombre = usuario.Nombre;
-                        // ExistingUser.Telefono = usuario.Telefono;
-                        // ExistingUser.NombreUsuario = usuario.NombreUsuario;
-                        // ExistingUser.Contrasenia = usuario.Contrasenia;
-                        // ExistingUser.Correo = usuario.Correo;
-                        // ExistingUser.RolId = usuario.RolId;
-                        // ExistingUser.Direccion = usuario.Direccion;
-                        // ExistingUser.Ciudad = usuario.Ciudad;
-                        // ExistingUser.Departamento = usuario.Departamento;
-                        // ExistingUser.CodigoPostal = usuario.CodigoPostal;
                         _context.Entry(ExistingUser).State = EntityState.Detached;
                         _context.Update(usuario);
                         await _context.SaveChangesAsync();
