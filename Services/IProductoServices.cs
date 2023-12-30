@@ -10,5 +10,7 @@ namespace ANNIE_SHOP.Services
         Task<List<Producto>> GetProductosDestacados();
 
         Task<ProductosPaginadosViewModel> GetProductoPaginados(int? categoriaId, string? busqueda, int pagina, int productosPorPaginas);
+
+        Task<string> subirImagenStorage(Stream archivo, string nombre);
     }
 }

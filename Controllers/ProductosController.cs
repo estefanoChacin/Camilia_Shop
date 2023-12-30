@@ -4,14 +4,19 @@ using Microsoft.EntityFrameworkCore;
 using ANNIE_SHOP.Data;
 using ANNIE_SHOP.Models;
 using Microsoft.AspNetCore.Authorization;
+using ANNIE_SHOP.Services;
+
 
 namespace ANNIE_SHOP.Controllers
 {
     [Authorize(Roles = "Administrador, Staff")]
     public class ProductosController : BaseController
     {
-        public ProductosController(ApplicationDbContext context):base(context)
-        {}
+        private readonly IProductoServices _productosServices;
+        public ProductosController(ApplicationDbContext context, IProductoServices productos):base(context)
+        {
+            _productosServices = productos;
+        }
 
 
 
@@ -62,9 +67,16 @@ namespace ANNIE_SHOP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([FromForm] Producto producto)
+        public async Task<IActionResult> Create([FromForm] Producto producto, [FromForm]IFormFile image)
         {
             var categoriaFind =await _context.Categorias.Where(c=> c.CategoriaId == producto.CategoriaId).FirstOrDefaultAsync();
+
+            if(image != null)
+            {
+                string nombre = image.FileName;
+                Stream imageStorage = image.OpenReadStream();
+                producto.Imagen = await _productosServices.subirImagenStorage(imageStorage, nombre);
+            }
 
             if(categoriaFind != null)
             {
