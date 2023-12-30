@@ -117,7 +117,7 @@ namespace ANNIE_SHOP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [FromForm] Producto producto)
+        public async Task<IActionResult> Edit(int id, [FromForm] Producto producto, [FromForm] IFormFile image)
         {
             if (id != producto.ProductoId)
             {
@@ -131,6 +131,13 @@ namespace ANNIE_SHOP.Controllers
                 producto.Categoria = categoriaFind;
                 try
                 {
+                    if(image != null)
+                    {
+                        string nombre = image.FileName;
+                        Stream imageStorage = image.OpenReadStream();
+                        producto.Imagen = await _productosServices.subirImagenStorage(imageStorage, nombre);
+                    }
+
                     _context.Update(producto);
                     await _context.SaveChangesAsync();
                 }
