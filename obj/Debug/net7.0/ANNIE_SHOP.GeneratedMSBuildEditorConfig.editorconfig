@@ -130,6 +130,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Perfil/AgregarDireccion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXEFncmVnYXJEaXJlY2Npb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Perfil/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PROYECTOS PERSONALES/ANNIE_SHOP/ANNIE_SHOP/Views/Productos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
