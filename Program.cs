@@ -3,6 +3,7 @@ using ANNIE_SHOP.Models;
 using ANNIE_SHOP.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Protocols;
 
 var builder = WebApplication.CreateBuilder(args);
 
