@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ANNIE_SHOP.Controllers
 {
-    [Authorize(Roles = "Administrador, Staff")]
+    [Authorize(Policy = "RequireAdminOrStaff")]
     public class CategoriasController : BaseController
     {
 

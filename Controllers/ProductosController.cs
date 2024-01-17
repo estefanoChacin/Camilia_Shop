@@ -9,7 +9,7 @@ using ANNIE_SHOP.Services;
 
 namespace ANNIE_SHOP.Controllers
 {
-    [Authorize(Roles = "Administrador, Staff")]
+    [Authorize(Policy = "RequireAdminOrStaff")]
     public class ProductosController : BaseController
     {
         private readonly IProductoServices _productosServices;

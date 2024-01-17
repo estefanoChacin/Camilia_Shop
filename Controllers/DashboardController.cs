@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ANNIE_SHOP.Controllers
 {
-    [Authorize(Roles = "Administrador, Staff")]
+    [Authorize(Policy = "RequireAdminOrStaff")]
 
     public class DashboardController : BaseController
     {
