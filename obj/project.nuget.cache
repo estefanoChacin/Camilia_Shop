@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e730YDYLOjFO8CI2NRqIJ4vREEp7C0Xxa9AgakH58s7fz943AN9yUzMN331ePWStcz7uz+Y6bzXAHg79AyH7uQ==",
+  "dgSpecHash": "9IyEBl+7N1IhKJsfsZU7PgYyoIVTzJHIiveTzVX0UMDvAPM+0MRlI4fRmxUOuSGMlEgZQLHKM/kskMCfxeumSw==",
   "success": true,
-  "projectFilePath": "d:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\ANNIE_SHOP.csproj",
+  "projectFilePath": "D:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\ANNIE_SHOP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WPOSS\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\WPOSS\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

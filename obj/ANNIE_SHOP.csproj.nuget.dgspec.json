@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\ANNIE_SHOP.csproj": {}
+    "D:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\ANNIE_SHOP.csproj": {}
   },
   "projects": {
-    "d:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\ANNIE_SHOP.csproj": {
+    "D:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\ANNIE_SHOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\ANNIE_SHOP.csproj",
+        "projectUniqueName": "D:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\ANNIE_SHOP.csproj",
         "projectName": "ANNIE_SHOP",
-        "projectPath": "d:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\ANNIE_SHOP.csproj",
+        "projectPath": "D:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\ANNIE_SHOP.csproj",
         "packagesPath": "C:\\Users\\WPOSS\\.nuget\\packages\\",
-        "outputPath": "d:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\obj\\",
+        "outputPath": "D:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -26,6 +26,7 @@ namespace ANNIE_SHOP.Controllers
         {
             var carritoViewModel = await GetCarritoViewModelAsync();
 
+            var itemsEliminar = new List<CarritoItemViewModel>();
             foreach (var item in carritoViewModel.Items)
             {
                 var producto = await _context.Productos.FindAsync(item.ProdcutoId);
@@ -34,7 +35,7 @@ namespace ANNIE_SHOP.Controllers
                     item.Producto = producto;
 
                     if (!producto.Activo)
-                        item.Cantidad = 0;
+                        itemsEliminar.Add(item);
                     else
                         item.Cantidad = Math.Min(item.Cantidad, producto.Stock);
 
@@ -42,8 +43,15 @@ namespace ANNIE_SHOP.Controllers
                         carritoViewModel.Items.Remove(item);
                 }
                 else
-                    item.Cantidad = 0;
+                    itemsEliminar.Add(item);
             }
+
+            foreach (var item in itemsEliminar)
+            {
+                carritoViewModel.Items.Remove(item);
+            }
+            await ActualizarCarritoViewModelAsync(carritoViewModel);
+
             carritoViewModel.Total = carritoViewModel.Items.Sum(item => item.Subtotal);
 
 
