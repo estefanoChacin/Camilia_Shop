@@ -38,6 +38,8 @@ builder.Services
 builder.Services.AddScoped<IProductoServices, ProductoServices>();
 builder.Services.AddScoped<ICategoriaServices, CategoriaServices>();
 builder.Services.AddScoped<IUsuarioServices, UsuarioServices>();
+builder.Services.AddScoped<IBannerService, BannerServices>();
+
 
 
 
