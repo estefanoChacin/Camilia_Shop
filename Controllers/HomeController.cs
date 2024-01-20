@@ -26,6 +26,7 @@ namespace ANNIE_SHOP.Controllers
         public async Task<IActionResult> Index()
         {
             ViewBag.Categorias = await _categorias.GetCategorias();
+            ViewBag.Banners = _context.Banners.ToList();
             try
             {
                 List<Producto> productosDestacados = await _productos.GetProductosDestacados();

@@ -42,7 +42,7 @@ else
                             {
                                 <form asp-action="ActualizarCantidad" asp-controller="Carrito" method="post">
                                     <div class="input-group input-group-sm">
-                                        <input type="number" name="cantidad" class="form-control" min="1"
+                                        <input type="number" style="min-width: 20px" name="cantidad" class="form-control" min="1"
                                             max="@item.Producto.Stock" value="@item.Cantidad">
                                         <div class="input-group-append">
                                             <button type="submit" class="btn btn-primary"><i class="fas fa-sync-alt"></i></button>
