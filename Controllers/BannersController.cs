@@ -2,15 +2,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ANNIE_SHOP.Data;
 using ANNIE_SHOP.Models;
+using ANNIE_SHOP.Services;
 
 namespace ANNIE_SHOP.Controllers
 {
     public class BannersController : BaseController
     {
 
-
-        public BannersController(ApplicationDbContext context):base(context)
+        private readonly IBannerService _banner;
+        public BannersController(ApplicationDbContext context, IBannerService banner):base(context)
         {
+            _banner = banner;
         }
 
         // GET: Banners
@@ -48,8 +50,17 @@ namespace ANNIE_SHOP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BannerId,ImagenUrl")] Banner banner)
+        public async Task<IActionResult> Create([FromForm]IFormFile imagenBanner)
         {
+            Banner banner = new Banner();
+
+            if(imagenBanner != null)
+            {
+                string nombre = imagenBanner.FileName;
+                Stream imageStorage = imagenBanner.OpenReadStream();
+                banner.ImagenUrl = await _banner.SubirImgenStorage(imageStorage, nombre);
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(banner);
@@ -80,13 +91,18 @@ namespace ANNIE_SHOP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BannerId,ImagenUrl")] Banner banner)
+        public async Task<IActionResult> Edit(int id, [Bind("BannerId,ImagenUrl")] Banner banner, [FromForm] IFormFile imagenBanner)
         {
             if (id != banner.BannerId)
             {
                 return NotFound();
             }
-
+            if(imagenBanner != null)
+            {
+                string nombreImagen = imagenBanner.FileName;
+                Stream file = imagenBanner.OpenReadStream();
+                banner.ImagenUrl = await _banner.SubirImgenStorage(file, nombreImagen);
+            }
             if (ModelState.IsValid)
             {
                 try

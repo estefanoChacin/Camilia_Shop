@@ -4,30 +4,30 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Banners actuales</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Crear nuevo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ImagenUrl)
+                Imagen actual
             </th>
-            <th></th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.ImagenUrl)
+                <img  src="@item.ImagenUrl" alt="iamgenBanner" width="100px">
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.BannerId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.BannerId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.BannerId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.BannerId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.BannerId">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.BannerId">Eliminar</a>
             </td>
         </tr>
 }
