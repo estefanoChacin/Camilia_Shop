@@ -15,6 +15,7 @@ namespace ANNIE_SHOP.Controllers
         private readonly string clientId = "Ae3KbekakPz-FnS_OQRBjqAoRt9PznJLIgBBTiLLL6KlT5kLHBe8OY9nJWf7tSTbdwCNexZroYCkWXa3";
         private readonly string clientSecret = "ED-3QHzy2im3eSslnpgs8ZqdrIM7k0kh-B3E3NIYd2AwETvisCpKcB7wGufB6uEMLCUR2zsAgOXpzjel";
 
+
         public CarritoController(ApplicationDbContext context) : base(context)
         {
         }
