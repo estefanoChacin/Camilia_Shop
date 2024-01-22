@@ -1,19 +1,23 @@
 
-using System.Globalization;
+using ANNIE_SHOP.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ANNIE_SHOP.Data;
 using ANNIE_SHOP.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ANNIE_SHOP.Controllers
 {
+    [Authorize(Policy = "RequireAdminOrStaff")]
     public class UsuariosController : BaseController
     {
 
-
-        public UsuariosController(ApplicationDbContext context):base(context)
-        {}
+        private IUsuarioServices _usuriosServices;
+        public UsuariosController(ApplicationDbContext context, IUsuarioServices usuarioServices) : base(context)
+        {
+            _usuriosServices = usuarioServices;
+        }
 
 
 
@@ -90,6 +94,8 @@ namespace ANNIE_SHOP.Controllers
                     }
                 };
 
+                usuario.Contrasenia = _usuriosServices.EncriptedPassword(usuario.Contrasenia);
+
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -158,8 +164,13 @@ namespace ANNIE_SHOP.Controllers
                             CodigoPostal = usuario.CodigoPostal
                         };
                     }
+
+                    if(usuario.Contrasenia != ExistingUser.Contrasenia)
+                        usuario.Contrasenia = _usuriosServices.EncriptedPassword(usuario.Contrasenia);
+
                     try
                     {
+                        _context.Entry(ExistingUser).State = EntityState.Detached;
                         _context.Update(usuario);
                         await _context.SaveChangesAsync();
                     }

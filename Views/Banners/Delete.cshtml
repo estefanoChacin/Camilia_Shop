@@ -1,0 +1,24 @@
+@model ANNIE_SHOP.Models.Banner
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar</h1>
+
+<h3>¿Estás seguro/a de que quieres eliminar esto?</h3>
+<div>
+    <h4>Banner</h4>
+    <hr />
+    <dl class="row">
+        <dd class = "col-sm-10">
+            <img  src="@Model.ImagenUrl" alt="imagen" width="400px">
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BannerId" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
+</div>

@@ -1,0 +1,35 @@
+@model IEnumerable<ANNIE_SHOP.Models.Banner>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Banners actuales</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Imagen actual
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <img  src="@item.ImagenUrl" alt="iamgenBanner" width="100px">
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BannerId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.BannerId">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.BannerId">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

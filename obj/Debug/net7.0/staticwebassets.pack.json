@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\wwwroot\\js\\breadcrumb.js",
+      "PackagePath": "staticwebassets\\js\\breadcrumb.js"
+    },
+    {
       "Id": "D:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

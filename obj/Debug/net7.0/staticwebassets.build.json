@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5MCZ5/V8Kai6W/ggyaOJ3SnZjl5eUJF0cY3bYTr7Z0c=",
+  "Hash": "WjUc8uYeBQvxw+Ouwdhh8fB9jZL2tSAMgxYknKUUgQ0=",
   "Source": "ANNIE_SHOP",
   "BasePath": "_content/ANNIE_SHOP",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\wwwroot\\js\\breadcrumb.js",
+      "SourceId": "ANNIE_SHOP",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\wwwroot\\",
+      "BasePath": "_content/ANNIE_SHOP",
+      "RelativePath": "js/breadcrumb.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\breadcrumb.js"
     },
     {
       "Identity": "D:\\PROYECTOS PERSONALES\\ANNIE_SHOP\\ANNIE_SHOP\\wwwroot\\js\\site.js",

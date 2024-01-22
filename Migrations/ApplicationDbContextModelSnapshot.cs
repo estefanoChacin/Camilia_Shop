@@ -22,6 +22,23 @@ namespace ANNIE_SHOP.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("ANNIE_SHOP.Models.Banner", b =>
+                {
+                    b.Property<int>("BannerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BannerId"));
+
+                    b.Property<string>("ImagenUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("BannerId");
+
+                    b.ToTable("Banners");
+                });
+
             modelBuilder.Entity("ANNIE_SHOP.Models.Categoria", b =>
                 {
                     b.Property<int>("CategoriaId")
@@ -286,13 +303,13 @@ namespace ANNIE_SHOP.Migrations
                     b.HasOne("ANNIE_SHOP.Models.Pedido", "Pedido")
                         .WithMany("DetallesPedidos")
                         .HasForeignKey("PedidoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ANNIE_SHOP.Models.Producto", "Producto")
                         .WithMany("DetallePedido")
                         .HasForeignKey("ProductoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Pedido");
@@ -316,7 +333,7 @@ namespace ANNIE_SHOP.Migrations
                     b.HasOne("ANNIE_SHOP.Models.Usuario", "Usuario")
                         .WithMany("Pedidos")
                         .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Usuario");

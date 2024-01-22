@@ -16,7 +16,7 @@ namespace ANNIE_SHOP.Data
         public DbSet<Direccion>Direccion{get; set;} = null!;
         public DbSet<Detalle_Pedido>DetallesPedidos{get; set;} = null!;
         public DbSet<Categoria>Categorias{get; set;} = null!;
-
+        public DbSet<Banner> Banners { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,19 +27,19 @@ namespace ANNIE_SHOP.Data
             .HasMany(p=>p.Pedidos)
             .WithOne(u=>u.Usuario)
             .HasForeignKey(p=>p.UsuarioId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Producto>()
             .HasMany(p=>p.DetallePedido)
             .WithOne(pd=>pd.Producto)
             .HasForeignKey(p=>p.ProductoId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Pedido>()
             .HasMany(p=>p.DetallesPedidos)
             .WithOne(pd=>pd.Pedido)
             .HasForeignKey(p=>p.PedidoId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Pedido>()
                 .Ignore(p=>p.Direccion);
@@ -49,8 +49,6 @@ namespace ANNIE_SHOP.Data
             .WithOne(pd=>pd.Categoria)
             .HasForeignKey(p=>p.CategoriaId)
             .OnDelete(DeleteBehavior.Restrict);
-            
-
         }
     }
 }

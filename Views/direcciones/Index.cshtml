@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Lista de direcciones</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Crear nuevo</a>
 </p>
 <table class="table">
     <thead>
@@ -46,12 +46,12 @@
                 @Html.DisplayFor(modelItem => item.CodigoPostal)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Usuario.Ciudad)
+                @Html.DisplayFor(modelItem => item.Usuario.Nombre)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.DireccionId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DireccionId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DireccionId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.DireccionId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.DireccionId">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.DireccionId">Eliminar</a>
             </td>
         </tr>
 }

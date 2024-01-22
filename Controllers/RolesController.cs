@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ANNIE_SHOP.Data;
 using ANNIE_SHOP.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ANNIE_SHOP.Controllers
 {
+    [Authorize(Policy = "RequireAdminOrStaff")]
     public class RolesController : BaseController
     {
         public RolesController(ApplicationDbContext context):base(context)

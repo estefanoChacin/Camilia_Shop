@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Lista de usurios</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Crear nuevo</a>
 </p>
 <table class="table">
     <thead>
@@ -58,7 +58,10 @@
                 @Html.DisplayFor(modelItem => item.NombreUsuario)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Contrasenia)
+                @{
+                    string dd = item.Contrasenia.Substring(0,12);
+                }
+                @dd...
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Correo)
@@ -79,9 +82,9 @@
                 @Html.DisplayFor(modelItem => item.Rol.Nombre)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.UsuarioId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.UsuarioId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.UsuarioId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.UsuarioId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.UsuarioId">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.UsuarioId">Eliminar</a>
             </td>
         </tr>
 }
